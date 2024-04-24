@@ -1,19 +1,23 @@
 #include <stdio.h>
 
+#define MAX_LENGTH 100
 
-char name[100];
-char phoneNumber[100];
-int customer() {
+struct Customer {
+    char name[MAX_LENGTH];
+    char phoneNumber[MAX_LENGTH];
+};
 
+int main() {
+    struct Customer customer;
 
     printf("Enter your name: ");
-    scanf("%s", name); // Input name
+    scanf("%s", customer.name); // Input name
 
     printf("Enter your phone number: ");
-    scanf("%s", phoneNumber); // Input phone number
+    scanf("%s", customer.phoneNumber); // Input phone number
 
-    printf("\nName: %s\n", name); // Print name
-    printf("Phone Number: %s\n", phoneNumber); // Print phone number
+    printf("\nName: %s\n", customer.name); // Print name
+    printf("Phone Number: %s\n", customer.phoneNumber); // Print phone number
 
     return 0;
 }
